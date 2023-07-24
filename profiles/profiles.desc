@@ -1,4 +1,8 @@
-amd64 plasma dev
-amd64 plasma/clang dev
-amd64 plasma/clang/no-multilib dev
-amd64 plasma/no-multilib dev
+amd64		plasma					dev
+amd64		plasma/clang				dev
+amd64		plasma/clang/no-multilib 		dev
+amd64		plasma/no-multilib			dev
+amd64		plasma/no-multilib/systemd		dev
+amd64		plasma/no-multilib/systemd/merged-usr	dev
+
+# vim: set ts=8 noet ft=conf:
