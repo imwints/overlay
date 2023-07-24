@@ -1,3 +1,4 @@
 amd64 plasma dev
 amd64 plasma/clang dev
 amd64 plasma/clang/no-multilib dev
+amd64 plasma/no-multilib dev
