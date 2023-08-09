@@ -1,1 +1,1 @@
-USE="-bluetooth -gtk -sdl -wifi"
+USE="-bluetooth -gtk -sdl -vala -wifi"
