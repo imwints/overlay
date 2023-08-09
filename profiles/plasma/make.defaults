@@ -1,1 +1,1 @@
-USE="-bluetooth -gtk -introspection -sdl -wifi"
+USE="-bluetooth -gtk -sdl -wifi"
