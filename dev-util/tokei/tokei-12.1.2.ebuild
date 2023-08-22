@@ -166,7 +166,7 @@ DESCRIPTION="Count your code, quickly."
 # does not provide this value so instead repository is used
 HOMEPAGE="https://tokei.rs"
 SRC_URI="https://github.com/XAMPPRocky/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	$(cargo_crate_uris)"
+	${CARGO_CRATE_URIS}"
 
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
