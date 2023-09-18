@@ -10,6 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/aristocratos/btop/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~arm ~arm64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~x86"
 fi
 
 DESCRIPTION="A monitor of resources"
@@ -17,7 +18,6 @@ HOMEPAGE="https://github.com/aristocratos/btop"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~m68k ~mips ~ppc ppc64 ~riscv x86"
 
 pkg_setup() {
 	if [[ "${MERGE_TYPE}" != "binary" ]]; then
