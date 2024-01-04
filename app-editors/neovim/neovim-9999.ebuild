@@ -12,8 +12,7 @@ DESCRIPTION="Vim-fork focused on extensibility and agility"
 HOMEPAGE="https://neovim.io"
 
 if [[ ${PV} == 9999 ]]; then
-	SRC_URI="https://github.com/neovim/neovim/archive/refs/tags/nightly.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/${PN}-nightly"
+	inherit git-r3
 else
 	SRC_URI="https://github.com/neovim/neovim/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86 ~x64-macos"
@@ -68,6 +67,17 @@ BDEPEND+="
 PATCHES=(
 	"${FILESDIR}/${PN}-0.9.0-cmake_lua_version.patch"
 )
+
+src_unpack() {
+	if [[ ${PV} == 9999 ]]; then
+		# Upstream often splits up related changes into different merges.
+		# Nightly does not release with related changes missing.
+		git-r3_fetch https://github.com/neovim/neovim.git refs/tags/nightly
+		git-r3_checkout
+	else
+		default
+	fi
+}
 
 src_prepare() {
 	# Use our system vim dir
