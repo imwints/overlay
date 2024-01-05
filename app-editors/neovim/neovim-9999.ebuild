@@ -13,6 +13,7 @@ HOMEPAGE="https://neovim.io"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
+	EGIT_REPO_URI="https://github.com/neovim/neovim.git"
 else
 	SRC_URI="https://github.com/neovim/neovim/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86 ~x64-macos"
@@ -72,7 +73,7 @@ src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		# Upstream often splits up related changes into different merges.
 		# Nightly does not release with related changes missing.
-		git-r3_fetch https://github.com/neovim/neovim.git refs/tags/nightly
+		git-r3_fetch ${EGIT_REPO_URI} refs/tags/nightly
 		git-r3_checkout
 	else
 		default
