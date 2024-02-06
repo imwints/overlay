@@ -1,0 +1,7 @@
+>=sys-auth/polkit-qt-0.175.0 qt6
+>=app-crypt/qca-2.3.8 qt6
+
+>=kde-frameworks/kwindowsystem-5.249.0 X
+>=dev-qt/qtbase-6.6.1-r4 X
+>=dev-qt/qtmultimedia-6.6.1-r1 X
+>=x11-libs/libxkbcommon-1.6.0 X
