@@ -1,1 +1,1 @@
-USE="-X -gtk -qt5"
+USE="kf6compat -X -gtk -qt5"
