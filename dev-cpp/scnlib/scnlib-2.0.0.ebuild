@@ -17,19 +17,22 @@ IUSE="test"
 BDEPEND="
 	dev-cpp/fast_float
 	>=dev-cpp/simdutf-4.0.0:=
+	test? ( dev-cpp/gtest )
 "
+
+src_prepare() {
+	use test && eapply "${FILESDIR}/${P}-no-external-test-deps.patch"
+	cmake_src_prepare
+}
 
 src_configure() {
 	local mycmakeargs=(
-		-DCMAKE_CXX_STANDARD=20
-		-DCMAKE_CXX_EXTENSIONS=OFF
 		-DSCN_BENCHMARKS=OFF
 		-DSCN_BENCHMARKS_BINARYSIZE=OFF
 		-DSCN_BENCHMARKS_BUILDTIME=OFF
 		-DSCN_DOCS=OFF
-		-DSCN_EXAMPLES=OFF
-		# Unconditionally calls FetchContent for GTest
-		-DSCN_TESTS=OFF
+		-DSCN_EXAMPLES=$(usex test ON OFF)
+		-DSCN_TESTS=$(usex test ON OFF)
 		-DSCN_USE_EXTERNAL_FAST_FLOAT=ON
 		-DSCN_USE_EXTERNAL_SIMDUTF=ON
 	)
