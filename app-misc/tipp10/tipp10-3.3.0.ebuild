@@ -7,19 +7,17 @@ inherit cmake xdg
 
 DESCRIPTION="Learn touch typing for free"
 HOMEPAGE="https://tipp10.com/en/"
-SRC_URI="https://gitlab.com/tipp10/tipp10/-/archive/v${PV}/tipp10-v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://gitlab.com/tipp10/tipp10/-/archive/v${PV}/tipp10-v${PV}.tar.bz2 -> ${P}.tar.bz2"
 
 S="${WORKDIR}/tipp10-v${PV}"
 
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
-RDEPEND="
-    >=dev-qt/qtbase-6.4:6[sql,widgets]
-    >=dev-qt/qtmultimedia-6.4:6
+RESTRICT="test"
+
+DEPEND="
+	>=dev-qt/qtbase-6.4:6[sql,widgets]
+	>=dev-qt/qtmultimedia-6.4:6
 "
-DEPEND="${RDEPEND}"
-BDEPEND=""
-
