@@ -1,0 +1,3 @@
+# Does not work with KF6 at the moment
+# Would pull half of KF5
+app-office/libreoffice kde

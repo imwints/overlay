@@ -1,7 +1,23 @@
->=sys-auth/polkit-qt-0.175.0 qt6
->=app-crypt/qca-2.3.8 qt6
+# Since most apps don't have conditional support for gtk, which is disabled here,
+# gtk apps don't look good without plasma's integration
+# Disable other features not being used
+kde-plasma/plasma-meta gtk -crash-handler -crypt -firewall -smart -wallpapers
 
->=kde-frameworks/kwindowsystem-5.249.0 X
->=dev-qt/qtbase-6.6.1-r4 X
->=dev-qt/qtmultimedia-6.6.1-r1 X
->=x11-libs/libxkbcommon-1.6.0 X
+# Commonly used on all desktops
+kde-apps/kio-extras mtp samba
+
+# X: Required by libplasma
+# accessibility: Required by kwin
+# cups: Required by xdg-desktop-portal-kde
+dev-qt/qtbase:6 X accessibility cups
+dev-qt/qtmultimedia:6 X
+media-libs/libepoxy X
+x11-libs/cairo X
+x11-libs/gtk+ X
+x11-libs/libxkbcommon X
+
+# designer: Reqired by kwin
+# qdbus: Reqired by kinfocenter and plasma-workspace
+dev-qt/qttools:6 designer qdbus
+
+net-libs/libproxy -kde
