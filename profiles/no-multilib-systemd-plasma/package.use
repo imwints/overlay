@@ -9,9 +9,11 @@ kde-apps/kio-extras mtp samba
 # X: Required by libplasma
 # accessibility: Required by kwin
 # cups: Required by xdg-desktop-portal-kde
-dev-qt/qtbase:6 X accessibility cups
+# xml: Various packages
+dev-qt/qtbase:6 X accessibility cups xml
 dev-qt/qtmultimedia:6 X
 media-libs/libepoxy X
+media-libs/mesa X
 x11-libs/cairo X
 x11-libs/gtk+ X
 x11-libs/libxkbcommon X
@@ -20,4 +22,11 @@ x11-libs/libxkbcommon X
 # qdbus: Reqired by kinfocenter and plasma-workspace
 dev-qt/qttools:6 designer qdbus
 
+# Pulls unwanted dependencies
 net-libs/libproxy -kde
+
+# Mpv is better
+media-libs/phonon -vlc
+
+# Requires X
+media-video/mpv -opengl
