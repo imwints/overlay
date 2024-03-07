@@ -63,13 +63,9 @@ BDEPEND="
 PATCHES=(
 	# Downstream patches
 	"${FILESDIR}/${PN}-0.20.0-respect-user-flags.patch"
-	"${FILESDIR}/${P}-Xsession.patch" # bug 611210
 	"${FILESDIR}/${PN}-0.20.0-sddm.pam-use-substack.patch" # bug 728550
 	"${FILESDIR}/${P}-disable-etc-debian-check.patch"
 	"${FILESDIR}/${P}-no-default-pam_systemd-module.patch" # bug 669980
-
-	# Qt6 theme support: https://github.com/sddm/sddm/pull/1876
-	"${FILESDIR}/${P}-qt6-themes.patch"
 )
 
 pkg_setup() {
@@ -97,7 +93,7 @@ EOF
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_MAN_PAGES=ON
-		-DBUILD_WITH_QT6=OFF # default theme  (and others) not yet compatible
+		-DBUILD_WITH_QT6=$(usex qt6)
 		-DDBUS_CONFIG_FILENAME="org.freedesktop.sddm.conf"
 		-DRUNTIME_DIR=/run/sddm
 		-DSYSTEMD_TMPFILES_DIR="/usr/lib/tmpfiles.d"
