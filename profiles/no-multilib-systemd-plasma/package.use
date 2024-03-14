@@ -7,10 +7,9 @@ kde-plasma/plasma-meta gtk -crash-handler -crypt -firewall -smart -wallpapers
 kde-apps/kio-extras mtp samba
 
 # X: Required by libplasma
-# accessibility: Required by kwin
 # cups: Required by xdg-desktop-portal-kde
 # xml: Various packages
-dev-qt/qtbase:6 X accessibility cups xml
+dev-qt/qtbase:6 X cups xml
 dev-qt/qtmultimedia:6 X
 media-libs/libepoxy X
 media-libs/mesa X
