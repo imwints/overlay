@@ -29,3 +29,5 @@ media-libs/phonon -vlc
 
 # Requires X
 media-video/mpv -opengl
+
+media-libs/libglvnd X
