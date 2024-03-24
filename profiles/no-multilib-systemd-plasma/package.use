@@ -31,3 +31,6 @@ media-libs/phonon -vlc
 media-video/mpv -opengl
 
 media-libs/libglvnd X
+
+# X: Required by kwin in 23.0
+kde-frameworks/kwindowsystem X
