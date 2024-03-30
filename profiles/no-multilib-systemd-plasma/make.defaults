@@ -1,1 +1,1 @@
-USE="kf6compat qt6 -X -a52 -accessibility -cdda -cdr -cups -dri -dts -dvd -dvdr -flac -gpm -gtk -handbook -lcms -mad -mng -phonon -ppds -qt5 -sdl -vorbis -wxwidgets -xml -xv -xvid"
+USE="kf6compat qt6 -a52 -accessibility -cdda -cdr -cups -dri -dts -dvd -dvdr -flac -gpm -gtk -handbook -lcms -mad -mng -phonon -ppds -qt5 -sdl -vorbis -wxwidgets -xml -xv -xvid"
