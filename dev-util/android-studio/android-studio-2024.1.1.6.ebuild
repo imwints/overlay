@@ -32,6 +32,7 @@ QA_PREBUILT="
 DESCRIPTION="Android development environment based on IntelliJ IDEA"
 HOMEPAGE="https://developer.android.com/studio"
 SRC_URI="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${PV}/${P}-linux.tar.gz"
+S=${WORKDIR}/${PN}
 
 LICENSE="Apache-2.0 android BSD BSD-2 CDDL-1.1 CPL-0.5
 	EPL-1.0 GPL-2 GPL-2+ JDOM IJG LGPL-2.1 MIT
@@ -66,8 +67,6 @@ RDEPEND="${DEPEND}
 	>=x11-libs/libxshmfence-1.3.2
 	virtual/libcrypt:=
 "
-
-S=${WORKDIR}/${PN}
 
 src_compile() {
 	:;
