@@ -16,13 +16,13 @@ else
 		https://github.com/Byron/gitoxide/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}
 	"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="|| ( Apache-2.0 MIT )"
 # Dependent crate licenses
 LICENSE+=" Apache-2.0 BSD Boost-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016"
 SLOT="0"
-KEYWORDS="~amd64"
 
 BDEPEND="virtual/pkgconfig"
 DEPEND="

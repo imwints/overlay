@@ -16,6 +16,7 @@ else
 		https://github.com/Decodetalkers/neocmakelsp/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}
 	"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="MIT"
@@ -25,7 +26,6 @@ LICENSE+="
 	|| ( Apache-2.0 Boost-1.0 )
 "
 SLOT="0"
-KEYWORDS="~amd64"
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
