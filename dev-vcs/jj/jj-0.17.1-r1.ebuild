@@ -376,7 +376,7 @@ HOMEPAGE="https://github.com/martinvonz/jj"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/martinvonz/jj.git"
-else 
+else
 	SRC_URI="
 		https://github.com/martinvonz/jj/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}
