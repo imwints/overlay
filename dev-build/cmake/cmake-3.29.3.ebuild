@@ -36,7 +36,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="dap doc gui ncurses qt6 test"
+IUSE="dap +doc gui ncurses qt6 test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
