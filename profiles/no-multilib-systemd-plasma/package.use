@@ -15,9 +15,14 @@ dev-qt/qtbase:6 X cups xml
 # qdbus: Reqired by kinfocenter and plasma-workspace
 dev-qt/qttools:6 designer qdbus
 
+kde-plasma/breeze:6 qt5
+kde-plasma/plasma-integration:6 qt5
+
 # Pulls unwanted dependencies
 net-libs/libproxy -kde
 
 # Mpv is better
 media-libs/phonon -vlc
+
+x11-base/xwayland libei
 
