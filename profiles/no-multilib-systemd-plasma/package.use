@@ -26,3 +26,6 @@ media-libs/phonon -vlc
 
 x11-base/xwayland libei
 
+app-crypt/qca qt5
+sys-auth/polkit-qt qt5
+
