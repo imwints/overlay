@@ -7,6 +7,7 @@ kde-plasma/breeze:6 qt5
 kde-plasma/plasma-integration:6 qt5
 kde-plasma/plasma-meta gtk -crash-handler -crypt -firewall -smart -wallpapers
 media-libs/phonon -vlc
+media-video/mpv -opengl
 net-libs/libproxy -kde
 sys-auth/polkit-qt qt5
 x11-base/xwayland libei
