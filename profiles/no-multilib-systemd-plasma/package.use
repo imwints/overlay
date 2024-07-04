@@ -1,11 +1,17 @@
 app-crypt/qca qt5
 dev-qt/qtbase:6 X cups xml
+dev-qt/qtdeclarative:6 X
+dev-qt/qtgui:5 X
+dev-qt/qtmultimedia:6 X
 dev-qt/qttools:6 designer qdbus
 kde-apps/kio-extras mtp samba
-kde-frameworks/kwindowsystem:6 X
+kde-frameworks/kwindowsystem X
 kde-plasma/breeze:6 qt5
 kde-plasma/plasma-integration:6 qt5
 kde-plasma/plasma-meta gtk -crash-handler -crypt -firewall -smart -wallpapers
+media-libs/libepoxy X
+media-libs/libglvnd X
+media-libs/mesa X
 media-libs/phonon -vlc
 media-video/mpv -opengl
 net-libs/libproxy -kde
