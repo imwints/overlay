@@ -1,31 +1,13 @@
-# Since most apps don't have conditional support for gtk, which is disabled here,
-# gtk apps don't look good without plasma's integration
-# Disable other features not being used
-kde-plasma/plasma-meta gtk -crash-handler -crypt -firewall -smart -wallpapers
-
-# Commonly used on all desktops
-kde-apps/kio-extras mtp samba
-
-# X: Required by libplasma
-# cups: Required by xdg-desktop-portal-kde
-# xml: Various packages
+app-crypt/qca qt5
 dev-qt/qtbase:6 X cups xml
-
-# designer: Reqired by kwin
-# qdbus: Reqired by kinfocenter and plasma-workspace
 dev-qt/qttools:6 designer qdbus
-
+kde-apps/kio-extras mtp samba
+kde-frameworks/kwindowsystem:6 X
 kde-plasma/breeze:6 qt5
 kde-plasma/plasma-integration:6 qt5
-
-# Pulls unwanted dependencies
-net-libs/libproxy -kde
-
-# Mpv is better
+kde-plasma/plasma-meta gtk -crash-handler -crypt -firewall -smart -wallpapers
 media-libs/phonon -vlc
-
-x11-base/xwayland libei
-
-app-crypt/qca qt5
+net-libs/libproxy -kde
 sys-auth/polkit-qt qt5
-
+x11-base/xwayland libei
+x11-libs/libxkbcommon X
