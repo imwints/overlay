@@ -1,0 +1,59 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index 23104a75..bde966d2 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -967,9 +967,9 @@ checksum = "40ecd4077b5ae9fd2e9e169b102c6c330d0605168eb0e8bf79952b256dbefffd"
+ 
+ [[package]]
+ name = "git2"
+-version = "0.18.3"
++version = "0.19.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "232e6a7bfe35766bf715e55a88b39a700596c0ccfd88cd3680b4cdb40d66ef70"
++checksum = "b903b73e45dc0c6c596f2d37eccece7c1c8bb6e4407b001096387c63d0d93724"
+ dependencies = [
+  "bitflags 2.5.0",
+  "libc",
+@@ -2016,9 +2016,9 @@ checksum = "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
+ 
+ [[package]]
+ name = "libgit2-sys"
+-version = "0.16.2+1.7.2"
++version = "0.17.0+1.8.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "ee4126d8b4ee5c9d9ea891dd875cfdc1e9d0950437179104b183d7d8a74d24e8"
++checksum = "10472326a8a6477c3c20a64547b0059e4b0d086869eee31e6d7da728a8eb7224"
+ dependencies = [
+  "cc",
+  "libc",
+diff --git a/Cargo.toml b/Cargo.toml
+index d0b7fa5b..ed23d7ce 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -48,7 +48,7 @@ dunce = "1.0.4"
+ either = "1.13.0"
+ esl01-renderdag = "0.3.0"
+ futures = "0.3.30"
+-git2 = "0.18.3"
++git2 = "0.19.0"
+ gix = { version = "0.63.0", default-features = false, features = [
+     "index",
+     "max-performance-safe",
+diff --git a/lib/src/git.rs b/lib/src/git.rs
+index 666ea231..dec54f6c 100644
+--- a/lib/src/git.rs
++++ b/lib/src/git.rs
+@@ -1266,7 +1266,12 @@ pub fn fetch(
+     tracing::debug!("remote.prune");
+     remote.prune(None)?;
+     tracing::debug!("remote.update_tips");
+-    remote.update_tips(None, false, git2::AutotagOption::Unspecified, None)?;
++    remote.update_tips(
++        None,
++        git2::RemoteUpdateFlags::REPORT_UNCHANGED,
++        git2::AutotagOption::Unspecified,
++        None,
++    )?;
+     // TODO: We could make it optional to get the default branch since we only care
+     // about it on clone.
+     let mut default_branch = None;
