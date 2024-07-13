@@ -14,7 +14,6 @@ HOMEPAGE+=" https://community.kde.org/Plasma/Browser_Integration"
 LICENSE="GPL-3+"
 SLOT="6"
 KEYWORDS="~amd64"
-IUSE="librewolf"
 
 RDEPEND="
 	>=dev-qt/qtbase-${QTMIN}:6[dbus,gui,widgets]
@@ -35,7 +34,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	>=kde-frameworks/krunner-${KFMIN}:6
-	librewolf? ( || ( www-client/librewolf www-client/librewolf-bin ) )
 "
 
 src_configure() {
@@ -48,5 +46,5 @@ src_configure() {
 
 src_install() {
 	ecm_src_install
-	use librewolf && dosym "${EPREFIX}/usr/$(get_libdir)/mozilla/native-messaging-hosts" "${EPREFIX}/usr/$(get_libdir)/librewolf/native-messaging-hosts"
+	dosym "${EPREFIX}/usr/$(get_libdir)/mozilla/native-messaging-hosts" "${EPREFIX}/usr/$(get_libdir)/librewolf/native-messaging-hosts"
 }
