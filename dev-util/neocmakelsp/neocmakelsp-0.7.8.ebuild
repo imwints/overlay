@@ -15,7 +15,7 @@ CRATES="
 	anstyle-wincon@3.0.3
 	anstyle@1.0.7
 	anyhow@1.0.86
-	async-trait@0.1.80
+	async-trait@0.1.81
 	auto_impl@1.2.0
 	autocfg@1.3.0
 	backtrace@0.3.73
@@ -23,15 +23,15 @@ CRATES="
 	bitflags@2.6.0
 	bstr@1.9.1
 	bytes@1.6.0
-	cc@1.0.101
+	cc@1.1.0
 	cfg-if@1.0.0
-	clap@4.5.8
-	clap_builder@4.5.8
+	clap@4.5.9
+	clap_builder@4.5.9
 	clap_complete@4.5.7
 	clap_derive@4.5.8
 	clap_lex@0.7.1
-	cli-table-derive@0.4.5
-	cli-table@0.4.7
+	cli-table-derive@0.4.6
+	cli-table@0.4.9
 	colorchoice@1.0.1
 	const-random-macro@0.1.16
 	const-random@0.1.18
@@ -98,9 +98,9 @@ CRATES="
 	ryu@1.0.18
 	same-file@1.0.6
 	scopeguard@1.2.0
-	serde@1.0.203
-	serde_derive@1.0.203
-	serde_json@1.0.118
+	serde@1.0.204
+	serde_derive@1.0.204
+	serde_json@1.0.120
 	serde_repr@0.1.19
 	serde_spanned@0.6.6
 	sharded-slab@0.1.7
@@ -110,18 +110,18 @@ CRATES="
 	socket2@0.5.7
 	strsim@0.11.1
 	syn@1.0.109
-	syn@2.0.68
+	syn@2.0.70
 	termcolor@1.4.1
 	thread_local@1.1.8
 	tiny-keccak@2.0.2
-	tinyvec@1.6.1
+	tinyvec@1.8.0
 	tinyvec_macros@0.1.1
 	tokio-macros@2.3.0
 	tokio-util@0.7.11
 	tokio@1.38.0
 	toml@0.8.14
 	toml_datetime@0.6.6
-	toml_edit@0.22.14
+	toml_edit@0.22.15
 	tower-layer@0.3.2
 	tower-lsp-macros@0.9.0
 	tower-lsp@0.20.0
@@ -151,22 +151,22 @@ CRATES="
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-targets@0.48.5
-	windows-targets@0.52.5
+	windows-targets@0.52.6
 	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_gnullvm@0.52.5
+	windows_aarch64_gnullvm@0.52.6
 	windows_aarch64_msvc@0.48.5
-	windows_aarch64_msvc@0.52.5
+	windows_aarch64_msvc@0.52.6
 	windows_i686_gnu@0.48.5
-	windows_i686_gnu@0.52.5
-	windows_i686_gnullvm@0.52.5
+	windows_i686_gnu@0.52.6
+	windows_i686_gnullvm@0.52.6
 	windows_i686_msvc@0.48.5
-	windows_i686_msvc@0.52.5
+	windows_i686_msvc@0.52.6
 	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnu@0.52.5
+	windows_x86_64_gnu@0.52.6
 	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_gnullvm@0.52.5
+	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
-	windows_x86_64_msvc@0.52.5
+	windows_x86_64_msvc@0.52.6
 	winnow@0.6.13
 "
 
