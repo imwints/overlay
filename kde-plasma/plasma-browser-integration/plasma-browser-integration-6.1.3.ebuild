@@ -46,5 +46,5 @@ src_configure() {
 
 src_install() {
 	ecm_src_install
-	dosym "${EPREFIX}/usr/$(get_libdir)/mozilla/native-messaging-hosts" "${EPREFIX}/usr/$(get_libdir)/librewolf/native-messaging-hosts"
+	dosym "../mozilla/native-messaging-hosts" "${EPREFIX}/usr/$(get_libdir)/librewolf/native-messaging-hosts"
 }
