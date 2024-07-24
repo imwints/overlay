@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>java@gentoo.org</email>
+		<name>Java</name>
+	</maintainer>
+	<longdescription>
+		Java™ is the world's leading programming language and platform.
+		The code for Java is open source and available at OpenJDK™.
+	</longdescription>
+	<use>
+		<flag name="headless-awt">Don't install the X backend for AWT, needed by some GUIs</flag>
+		<flag name="jbootstrap">Build OpenJDK twice, the second time using the result of the first</flag>
+		<flag name="source">Install JVM sources</flag>
+		<flag name="system-bootstrap">Bootstrap using installed openjdk</flag>
+		<flag name="systemtap">Enable SystemTAP/DTrace tracing</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">JetBrains/JetBrainsRuntime</remote-id>
+	</upstream>
+</pkgmetadata>
