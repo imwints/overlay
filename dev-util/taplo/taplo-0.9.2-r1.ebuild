@@ -353,5 +353,5 @@ src_unpack() {
 }
 
 src_install() {
-	cargo_src_install --path crates/taplo-cli
+	cargo_src_install --path crates/taplo-cli --features lsp
 }
