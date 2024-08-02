@@ -17,4 +17,5 @@ media-video/mpv -opengl
 net-libs/libproxy -kde
 sys-auth/polkit-qt qt5
 x11-base/xwayland libei
+x11-libs/gtk+ X
 x11-libs/libxkbcommon X
