@@ -1,0 +1,2 @@
+# Needs rust-1.80
+=dev-util/neocmakelsp-0.8.0
