@@ -47,7 +47,6 @@ pkg_setup() {
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		git-r3_src_unpack
-		cd "${S}" && eapply "${FILESDIR}/${P}-update-git2.patch"
 		cargo_live_src_unpack
 	else
 		cargo_src_unpack
