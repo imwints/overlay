@@ -6,14 +6,14 @@ EAPI=8
 inherit cargo
 
 DESCRIPTION="The Lsp for cmake"
-HOMEPAGE="https://github.com/Decodetalkers/neocmakelsp"
+HOMEPAGE="https://github.com/neocmakelsp/neocmakelsp"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/Decodetalkers/neocmakelsp"
+	EGIT_REPO_URI="https://github.com/neocmakelsp/neocmakelsp"
 else
 	SRC_URI="
-		https://github.com/Decodetalkers/neocmakelsp/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+		https://github.com/neocmakelsp/neocmakelsp/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}
 	"
 	KEYWORDS="~amd64"
@@ -27,7 +27,7 @@ LICENSE+="
 "
 SLOT="0"
 
-QA_FLAGS_IGNORED="usr/bin/neocmakelsp"
+QA_FLAGS_IGNORED="usr/bin/${PN}"
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then

@@ -6,6 +6,6 @@
     <name>Steffen Winter</name>
   </maintainer>
   <upstream>
-    <remote-id type="github">Decodetalkers/neocmakelsp</remote-id>
+    <remote-id type="github">neocmakelsp/neocmakelsp</remote-id>
   </upstream>
 </pkgmetadata>
